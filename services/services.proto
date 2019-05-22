@@ -74,3 +74,15 @@ bytes Review = 5;
 string ID = 6;
 
 }
+ message AddStoryRequest{
+     Story Story = 1;
+
+ }
+
+ message AddStoryResponse{
+     bool Success = 1;
+ }
+
+service StoreesServices{
+    rpc AddStory(AddStoryRequest) returns (AddStoryResponse);
+}

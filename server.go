@@ -21,7 +21,6 @@ func main() {
 	}
 
 	s := grpc.NewServer()
-	services.RE(s, &server{})
 
 	// Register reflection service on gRPC server.
 	reflection.Register(s)
