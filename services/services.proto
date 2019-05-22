@@ -1,0 +1,76 @@
+syntax = "proto3";
+
+package services;
+
+message Topic{
+    string Name = 1;
+    string Genre = 2;
+    int64 Hotness = 3;
+    string ID = 4;
+}
+
+message Person{
+    string FirstName = 1;
+    string LastName = 2;
+
+    string City = 3;
+    string State = 4;
+    string Country =5;
+
+    int64 DOB = 6;
+    int64 Age = 7;
+
+    repeated string TopicsIDs = 8;
+    repeated string FriendsIDs = 9;
+
+    string ID = 10;
+
+    repeated string StoryIDs = 11;
+    repeated string ReviewIDs = 12;
+
+}
+
+message Story{
+    string ID = 8;
+
+    string Heading = 1;
+    bytes Story = 2;
+
+
+    string AuthorID = 5;
+
+    int64 AddTime = 6;
+    repeated int64 EditTimes = 7;
+
+    repeated string Genres = 3;
+    
+    repeated string MediaPaths =4;
+
+    repeated string TaggedPeopleIDs = 12;
+    
+ 
+    
+  
+    
+ 
+
+    repeated string TopicsIDs = 9;
+
+    int64 Views = 10;
+
+    repeated string ReviewIDs = 11;
+
+
+}
+
+message Review{
+
+string Heading = 1;
+string ReviewerID = 2;
+int64 AddTime = 3;
+int64 Stars = 4;
+bytes Review = 5;
+
+string ID = 6;
+
+}
